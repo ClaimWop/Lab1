@@ -1,0 +1,20 @@
+1) Скомпилировать .java файлы
+javac -sourcepath ./src -d bin src/com/package/SecondClass.java
+javac -sourcepath ./src -d bin src/com/FirstClass.java
+
+javac -d . FirstClass.java
+javac -d . SecondClass.java
+
+2) Запустить для проверки на ошибки
+java -cp bin/ com.FirstClass
+
+3) Указать путь для запуска jar
+PATH G:\Program Files\Java\jdk-17.0.2\bin
+
+4) Заархивировать программу
+jar -cvfm FirstJar.jar manifest.mf -C C:/ПП/1_lab/bin/ .
+
+5) Редактировать манифест. Добавить "Main-Class: FirstClass" и поменять фамилию.
+
+6) Запустить для проверки на ошибки
+java -jar FirstJar.jar
